@@ -24,3 +24,7 @@ h3,
 .work-sans {
 	font-family: 'Work Sans', sans-serif;
 }
+
+.blueShadow {
+	box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.45);
+}
