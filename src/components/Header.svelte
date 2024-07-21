@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	let y: number;
 	let tabs: { name: string; href: string }[] = [
@@ -8,24 +9,23 @@
 		// { name: "Contact", link: "" }
 		// {name: '', link: ''},
 	];
-	console.log($page.url.pathname);
+	const navigateToHome = () => {
+		goto('/', { replaceState: true });
+	};
 </script>
 
 <header
 	class={'sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border-b border-solid ' +
 		(y > 0 ? ' py-4 bg-slate-950 border-violet-950' : ' py-6 bg-transparent border-transparent')}
 >
-	<h1 class="font-medium">
+	<a class="font-medium cursor-pointer" href="/">
 		<b class="font-bold text-lg">Pirawat</b> <span class="">P</span>
-	</h1>
+	</a>
 	<div class="sm:flex items-center gap-4 hidden">
 		{#each tabs as { name, href } (name)}
 			<a
 				{href}
-				class:active={$page.url.pathname === href}
-				class={$page.url.pathname === href
-					? '  p-1 rounded-md shadow-md bg-slate-200/25'
-					: '' + 'duration-200 hover:text-violet-400'}
+				class={`text-white hover:text-black/50   ${$page.url.pathname === href ? 'p-1 rounded-md shadow-md bg-slate-200/25' : ''}`}
 			>
 				<p>{name}</p>
 			</a>
