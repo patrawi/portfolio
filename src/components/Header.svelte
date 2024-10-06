@@ -3,9 +3,9 @@
 	import { page } from '$app/stores';
 	let y: number;
 	let tabs: { name: string; href: string }[] = [
-		{ name: 'Projects', href: '/projects' },
-		{ name: 'About', href: '/about' },
-		{ name: 'Blogs', href: '/blog' }
+		{ name: '/Projects', href: '/projects' },
+		{ name: '/About', href: '/about' },
+		{ name: '/Blogs', href: '/blog' }
 		// { name: "Contact", link: "" }
 		// {name: '', link: ''},
 	];
