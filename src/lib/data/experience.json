@@ -1,0 +1,43 @@
+{
+	"workExperience": [
+		{
+			"company": "Ministry of Justice (Legal Execution Department)",
+			"location": "Bangkok, Thailand",
+			"duration": "October 2023 - Present",
+			"position": "Computer Officer Practitioner",
+			"responsibilities": [
+				"Created a script for scraping data from intranet website using Puppeteer and Line Notify APIs to notify tasks for team.",
+				"Modified login pages for several websites including both internal and external uses by using ThaID APIs and PHP improving user experience in logging in.",
+				"Developed a website application for managing employees in Auction Announcement Printing company using Laravel and VueJS."
+			],
+			"image": "led_logo.png"
+		},
+		{
+			"company": "Motorhub (Thailand) Co. Ltd.",
+			"location": "Bangkok, Thailand",
+			"duration": "March 2022 - October 2023",
+			"position": "Full Stack Developer",
+			"responsibilities": [
+				"Built a LIFF webview in line chat bot to be a marketplace in car services using Typescript, AWS, MUI css framework, LIFF API, line messaging API, and et cetera.",
+				"Made a script to upload data into AWS DynamoDB as well as AWS S3.",
+				"Implemented an AWS Lambda Service for computing event from users.",
+				"Built a Web app for displaying garages using Astro and TailwindCSS."
+			],
+			"image": "motorhub_icon.jpg"
+		},
+		{
+			"company": "Fintech (Thailand) Company Limited",
+			"location": "Bangkok, Thailand",
+			"duration": "August 2021 - March 2022",
+			"position": "Software Engineer (Part time)",
+			"project": "Finnize, Algo trading service platform",
+			"responsibilities": [
+				"Helped programming client pages such as transaction for withdraw/deposit and admin page for managing client using Typescript, React, headless CMS, and GraphQL.",
+				"Built an user interface and system for Bitkub as a partner on a platform such as FAQ, Port section, Bitkub action, and Sell dialog.",
+				"Managed time between working as a part time job and still concentrating in studying.",
+				"Fabricated an API in microservices using Go, gRPC, Protocol Buffers, and AWS S3."
+			],
+			"image": "fintech_logo.png"
+		}
+	]
+}

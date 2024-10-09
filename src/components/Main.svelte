@@ -6,7 +6,6 @@
 
 	import { typeIn } from '$lib/typeIn';
 	import { fade } from 'svelte/transition';
-	import { text } from '@sveltejs/kit';
 
 	let reverse = false;
 	let visible = false;

@@ -2,14 +2,14 @@ import type { ActionReturn } from 'svelte/action';
 
 const TRANSITION_MS = 300;
 
-function calculateMaxTilt(width: number, height: number) {
+function calculateMaxTilt(width: number, height: number, factor: number) {
 	const smallerDimension = Math.min(width, height);
-	const factor = 0.05;
+
 	return factor * smallerDimension;
 }
 
 function getSettings(setting = {}) {
-	return { scale: 1, reverse: false, ...setting };
+	return { scale: 1, reverse: false, factor: 0.05, ...setting };
 }
 
 export const tilt = (node: HTMLDivElement, settingsObj: any): ActionReturn<HTMLDivElement> => {
@@ -24,8 +24,8 @@ export const tilt = (node: HTMLDivElement, settingsObj: any): ActionReturn<HTMLD
 		updateRect();
 		const percX = (e.clientX - rect.left) / rect.width;
 		const percY = (e.clientY - rect.top) / rect.height;
-		const { scale } = settings;
-		const testMax = calculateMaxTilt(rect.width, rect.height);
+		const { scale, factor } = settings;
+		const testMax = calculateMaxTilt(rect.width, rect.height, factor);
 		const twiceMax = testMax * 2;
 		const tiltX = testMax - percX * twiceMax;
 		const tiltY = percY * twiceMax - testMax;

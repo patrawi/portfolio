@@ -3,9 +3,9 @@
 	import { page } from '$app/stores';
 	let y: number;
 	let tabs: { name: string; href: string }[] = [
-		{ name: 'Projects', href: '/projects' },
-		{ name: 'About', href: '/about' },
-		{ name: 'Blogs', href: '/blog' }
+		{ name: '/Projects', href: '/projects' },
+		{ name: '/About', href: '/about' },
+		{ name: '/Blogs', href: 'https://patrawi.com' }
 		// { name: "Contact", link: "" }
 		// {name: '', link: ''},
 	];
@@ -25,6 +25,7 @@
 		{#each tabs as { name, href } (name)}
 			<a
 				{href}
+				target={name === '/Blogs' ? '_blank' : ''}
 				class={`text-white hover:text-black/50   ${$page.url.pathname === href ? 'p-1 rounded-md shadow-md bg-slate-200/25' : ''}`}
 			>
 				<p>{name}</p>
