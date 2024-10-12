@@ -1,24 +1,20 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	let y: number;
+
+	export let y: number;
+
 	let tabs: { name: string; href: string }[] = [
 		{ name: '/Projects', href: '/projects' },
 		{ name: '/About', href: '/about' },
 		{ name: '/Blogs', href: 'https://patrawi.com' }
-		// { name: "Contact", link: "" }
-		// {name: '', link: ''},
 	];
-	const navigateToHome = () => {
-		goto('/', { replaceState: true });
-	};
 </script>
 
 <header
-	class={'sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border-b border-solid ' +
-		(y > 0 ? ' py-4 bg-slate-950 border-violet-950' : ' py-6 bg-transparent border-transparent')}
+	class={'sticky z-[10] w-full top-0 duration-200 px-6 flex items-center justify-between ' +
+		(y > 50 ? '  py-4  backdrop-blur-md ' : ' py-6 bg-transparent border-transparent')}
 >
-	<a class="font-medium cursor-pointer" href="/">
+	<a class="font-medium cursor-pointer text-white" href="/">
 		<b class="font-bold text-lg">Pirawat</b> <span class="">P</span>
 	</a>
 	<div class="sm:flex items-center gap-4 hidden">

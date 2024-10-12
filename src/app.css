@@ -28,3 +28,75 @@ h3,
 .blueShadow {
 	box-shadow: 0px 14px 55px rgba(109, 40, 217, 0.45);
 }
+
+@keyframes cover-reveal {
+	0% {
+		transform: translateX(-101%);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(101%);
+	}
+}
+@keyframes text-reveal {
+	50% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.reveal #cover {
+	animation: cover-reveal 700ms ease 100ms forwards;
+}
+
+.reveal #text {
+	animation: text-reveal 700ms ease 100ms forwards;
+}
+
+.reveal-slide #text {
+	opacity: 0;
+	animation: text-reveal-slide 700ms cubic-bezier(0.5, 0, 0.1, 1) 100ms forwards;
+}
+
+.reveal-slide #image {
+	opacity: 0;
+	animation: profile-reveal-slide 700ms ease 100ms forwards;
+}
+
+@keyframes profile-reveal-slide {
+	0% {
+		transform: translateX(-101%);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes text-reveal-slide {
+	0% {
+		transform: translateX(101%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01s !important;
+		animation-duration: 0.01s !important;
+		animation-iteration-count: 1 !important;
+	}
+}

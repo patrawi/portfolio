@@ -1,15 +1,30 @@
 <script>
 	import profile from '$lib/assets/test.webp?enhanced';
+	import { slide } from 'svelte/transition';
 	import Timeline from '../../components/Timeline.svelte';
+	import TextReveal from '../../components/TextReveal.svelte';
+	import ContentReveal from '../../components/ContentReveal.svelte';
+	let intersecting = false;
 </script>
 
 <section class="space-y-8">
-	<div class="font-bold">
-		<p class="drop-shadow-xl text-right uppercase text-white text-5xl mb-8">about me</p>
+	<div class="font-bold drop-shadow-xl text-right uppercase text-white text-5xl mb-8">
+		<TextReveal text="About  Me" />
 	</div>
-	<div id="content" class="flex flex-col lg:flex lg:flex-row items-center justify-center gap-20">
-		<div class="">
-			<enhanced:img src={profile} alt="An alt text" class="max-w-sm h-auto rounded-xl shadow-xl" />
+
+	<div
+		id="content"
+		class=" relative flex flex-col lg:flex lg:flex-row items-center justify-center gap-20"
+	>
+		<div class="bg-gray-50 p-2 rounded-xl relative overflow-hidden">
+			<ContentReveal delay={300}>
+				<enhanced:img
+					src={profile}
+					alt="An alt text"
+					id="image"
+					class="  max-w-sm h-auto rounded-xl shadow-xl"
+				/>
+			</ContentReveal>
 		</div>
 		<div class="bg-[#212A3C]/75 rounded-xl max-w-sm p-8 text-white flex flex-col gap-4">
 			<p>
@@ -31,11 +46,14 @@
 	</div>
 	<div id="experience" class="space-y-8">
 		<div class="font-bold space-y-4 drop-shadow-xl text-white">
-			<p class="uppercase text-5xl">Experience</p>
-			<p class="max-w-md indent-6">
-				I have more than 3 years of work experience and counting. Here are some companies I have had
-				the privilege to work at.
-			</p>
+			<div class="font-bold drop-shadow-xl tex uppercase text-white text-5xl mb-8">
+				<TextReveal text="experience" />
+			</div>
+			<ContentReveal
+				text="I have more than 3 years of work experience and counting. Here are some companies I have
+					had the privilege to work at."
+				type="text"
+			/>
 		</div>
 		<Timeline />
 	</div>
