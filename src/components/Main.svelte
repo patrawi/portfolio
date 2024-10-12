@@ -15,7 +15,6 @@
 
 	onMount(() => {
 		visible = true;
-		const defaultTime = roles[0].length / (0.75 * 0.01);
 
 		setTimeout(() => {
 			i = 0;
@@ -25,7 +24,6 @@
 			() => {
 				if (i < roles.length - 1) {
 					i += 1;
-					console.log('hello');
 				}
 			},
 			i === -1 ? 4000 : roles[i].length / (0.75 * 0.01)
@@ -56,9 +54,6 @@
 			id="content"
 			class=" bg-[#31354F]/75 rounded-b-xl flex-grow p-2 flex flex-col justify-center items-center"
 		>
-			<!-- <div class="font-bold text-white text-2xl">
-				Patrawi | <TypeWriter />
-			</div> -->
 			<div class="font-bold text-white text-2xl">
 				Patrawi |
 				{#key i}<span in:typeIn={{ speed: 0.75 }} out:fade={{ duration: 100 }}
