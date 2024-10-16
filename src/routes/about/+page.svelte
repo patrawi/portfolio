@@ -1,9 +1,9 @@
 <script>
 	import profile from '$lib/assets/test.webp?enhanced';
-	import { slide } from 'svelte/transition';
 	import Timeline from '../../components/Timeline.svelte';
 	import TextReveal from '../../components/TextReveal.svelte';
 	import ContentReveal from '../../components/ContentReveal.svelte';
+	import Contact from '../../components/Contact.svelte';
 	let intersecting = false;
 </script>
 
@@ -57,7 +57,5 @@
 		</div>
 		<Timeline />
 	</div>
+	<Contact />
 </section>
-
-<style>
-</style>
