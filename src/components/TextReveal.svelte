@@ -7,6 +7,7 @@
 	onMount(() => {
 		const observer = new IntersectionObserver((entries) => {
 			for (let entry of entries) {
+				console.log(entry.target);
 				if (once) {
 					if (entry.isIntersecting) {
 						entry.target.classList.add('reveal');
@@ -22,7 +23,7 @@
 </script>
 
 <div bind:this={isTextRevealed} class="relative inline-block">
-	<p id="text" class={`opacity-0  delay-${delay} `}>
+	<p id="text" class="opacity-0" style="animation-delay: {delay}ms">
 		{@html text}
 	</p>
 	<div class="pointer-events-none absolute inset-0 overflow-hidden">
