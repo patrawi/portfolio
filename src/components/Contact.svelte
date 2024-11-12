@@ -1,8 +1,21 @@
-<script>
+<script lang="ts">
 	import TextReveal from './TextReveal.svelte';
+
+	async function handleSubmit(event: { currentTarget: EventTarget & HTMLFormElement }) {
+		const formData = new FormData(event.currentTarget);
+		const jsonString = JSON.stringify(Object.fromEntries(formData));
+
+		await fetch(event.currentTarget.action, {
+			method: 'POST',
+			body: JSON.stringify(jsonString)
+		});
+	}
 </script>
 
-<div id="contact" class="p-8 mx-auto flex justify-between space-x-10 rounded-xl bg-[#212A3C]/75">
+<div
+	id="contact"
+	class="p-8 mx-auto max-w-5xl flex justify-between space-x-10 rounded-xl bg-[#212A3C]/75"
+>
 	<div class=" text-white space-y-4 w-1/2">
 		<div class="text-4xl">
 			<TextReveal text="Love To Hear From You," />
@@ -13,10 +26,11 @@
 			<strong>pirawat.w@led.mail.go.th</strong> and <strong>pirawatpatrawi@gmail.com</strong>
 		</p>
 	</div>
-	<form class="w-1/2 space-y-4">
+	<form class="w-1/2 space-y-4" method="POST" on:submit|preventDefault={handleSubmit}>
 		<input
 			class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 			id="name"
+			name="username"
 			type="text"
 			placeholder="Your name"
 			required
@@ -25,14 +39,16 @@
 		<input
 			class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 			id="email"
-			type="text"
+			type="email"
+			name="email"
 			placeholder="Your email"
 			required
 		/>
 
 		<textarea
 			class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-			id="email"
+			id="message"
+			name="message"
 			placeholder="Your message"
 			required
 			rows={10}
