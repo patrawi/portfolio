@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { json } from '@sveltejs/kit';
 	import TextReveal from './TextReveal.svelte';
 
 	async function handleSubmit(event: { currentTarget: EventTarget & HTMLFormElement }) {
@@ -13,7 +12,10 @@
 	}
 </script>
 
-<div id="contact" class="p-8 mx-auto flex justify-between space-x-10 rounded-xl bg-[#212A3C]/75">
+<div
+	id="contact"
+	class="p-8 mx-auto max-w-5xl flex justify-between space-x-10 rounded-xl bg-[#212A3C]/75"
+>
 	<div class=" text-white space-y-4 w-1/2">
 		<div class="text-4xl">
 			<TextReveal text="Love To Hear From You," />
