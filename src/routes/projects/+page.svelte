@@ -1,12 +1,29 @@
 <script lang="ts">
+	import ProjectCard from '../../components/ProjectCard.svelte';
+	import TextReveal from '../../components/TextReveal.svelte';
+	import ProjectData from '../../lib/data/project.json';
+	const { projects } = ProjectData;
 </script>
 
-<main class="container mx-auto px-4 py-8 max-w-4xl">
-	<h1 class="text-3xl font-bold mb-8 text-center">Projects in Development</h1>
+<section class="w-full relative">
+	<div class="mb-8 space-y-2 text-white">
+		<div class="font-bold drop-shadow-xl uppercase text-white text-5xl">
+			<TextReveal text="Projects" />
+		</div>
+		<TextReveal
+			text="Explore the creative ideas I've brought to life on my sharing blog! ✨
 
-	<p class="mb-6 text-lg">
-		I am currently working on several exciting projects that are in various stages of development.
-		While these projects are not yet deployed, they represent my ongoing commitment to learning and
-		applying new technologies.
-	</p>
-</main>
+
+
+
+
+
+"
+		/>
+	</div>
+	<div class="grid grid-cols-2 auto-rows-max gap-4">
+		{#each projects as project}
+			<ProjectCard {project} />
+		{/each}
+	</div>
+</section>

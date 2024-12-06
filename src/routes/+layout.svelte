@@ -9,9 +9,9 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="  relative flex flex-col w-full text-sm sm:text-base h-full">
+<div class="relative flex flex-col w-full text-sm sm:text-base min-h-screen">
 	<Header {y} />
-	<section class=" flex-grow px-8 container mx-auto">
+	<section class="px-8 container mx-auto flex-grow">
 		<slot />
 	</section>
 

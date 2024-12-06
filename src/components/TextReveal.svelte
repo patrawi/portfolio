@@ -7,7 +7,6 @@
 	onMount(() => {
 		const observer = new IntersectionObserver((entries) => {
 			for (let entry of entries) {
-				console.log(entry.target);
 				if (once) {
 					if (entry.isIntersecting) {
 						entry.target.classList.add('reveal');
