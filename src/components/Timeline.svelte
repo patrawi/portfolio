@@ -1,20 +1,12 @@
 <script lang="ts">
 	import { tilt } from '$lib/tilt';
-	import motor from '../lib/assets/led_logo.png';
-	import Card from './Card.svelte';
+	import Card from './ExperienceCard.svelte';
 	import experienceData from '$lib/data/experience.json';
+	import { getImgUrl } from '$lib/util';
 	const { workExperience } = experienceData;
 
 	let hoverStates: boolean[] = workExperience.map(() => false);
 
-	const images = import.meta.glob('../lib/assets/*.{png,jpg,jpeg,svg}', { eager: true });
-	const getImgUrl = (imageFileName: string) => {
-		const imagePath = `../lib/assets/${imageFileName}`;
-		if (images[imagePath]) {
-			return (images[imagePath] as { default: string }).default;
-		}
-		return 'src/libs/assets/test.webp';
-	};
 	const handleMouseEnter = (index: number) => {
 		hoverStates[index] = true;
 

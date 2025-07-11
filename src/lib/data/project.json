@@ -1,0 +1,11 @@
+{
+	"projects": [
+		{
+			"title": "Intersectin Observer API example",
+			"excerpt": "A web application, used as a use case for the Intersection Observer API, is built with ReactJS, TypeScript, and SWR to serve as an example of the Intersection Observer API in action. It is developed using the Rick & Morty API, which provides data in a paginated format.",
+			"tags": ["Typescript"],
+			"image": "rick&morty.png",
+			"link": "https://intersection-observer-example.vercel.app/"
+		}
+	]
+}
