@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+.svelte-kit/
+build/
+dist/
+.nuxt/
+.out/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE & Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.log
+*.pid
+*.seed
+*.pid.lock
+.turbo/
+
+# Vite
+.vite/cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

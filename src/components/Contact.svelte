@@ -14,19 +14,19 @@
 
 <div
 	id="contact"
-	class="p-8 mx-auto max-w-5xl flex justify-between space-x-10 rounded-xl bg-[#212A3C]/75"
+	class="p-4 sm:p-8 mx-auto max-w-5xl flex flex-col sm:flex-row gap-6 sm:gap-10 rounded-xl bg-[#212A3C]/75"
 >
-	<div class=" text-white space-y-4 w-1/2">
-		<div class="text-4xl">
+	<div class="text-white space-y-4 sm:w-1/2">
+		<div class="text-2xl sm:text-4xl">
 			<TextReveal text="Love To Hear From You," />
 			<TextReveal text="Get In Touch 👋" delay={600} />
 		</div>
-		<p>
+		<p class="text-sm sm:text-base">
 			Send me a message, and I'll respond as quickly as I can. My email addresses are
 			<strong>pirawat.w@led.mail.go.th</strong> and <strong>pirawatpatrawi@gmail.com</strong>
 		</p>
 	</div>
-	<form class="w-1/2 space-y-4" method="POST" on:submit|preventDefault={handleSubmit}>
+	<form class="sm:w-1/2 space-y-4" method="POST" action="/about" on:submit|preventDefault={handleSubmit}>
 		<input
 			class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 			id="name"

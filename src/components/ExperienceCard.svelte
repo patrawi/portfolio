@@ -7,7 +7,7 @@
 
 <div
 	transition:slide={{ duration: 500 }}
-	class="absolute left-0 top-0 bg-gray-800/85 backdrop-blur-xl h-full *:ml-auto p-4 rounded-lg text-left w-full overflow-y-auto overflow-x-hidden scrollbar-thin"
+	class="absolute left-0 top-0 z-50 bg-gray-800/85 backdrop-blur-xl h-full *:ml-auto p-4 rounded-lg text-left w-full overflow-y-auto overflow-x-hidden scrollbar-thin"
 >
 	<div class="space-y-2">
 		<div id="position">

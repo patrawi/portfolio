@@ -7,7 +7,7 @@
 
 <section class="w-full relative">
 	<div class="mb-8 space-y-2 text-white">
-		<div class="font-bold drop-shadow-xl uppercase text-white text-5xl">
+		<div class="font-bold drop-shadow-xl uppercase text-white text-4xl sm:text-5xl">
 			<TextReveal text="Projects" />
 		</div>
 		<TextReveal
@@ -21,7 +21,7 @@
 "
 		/>
 	</div>
-	<div class="grid grid-cols-2 auto-rows-max gap-4">
+	<div class="grid grid-cols-1 sm:grid-cols-2 auto-rows-max gap-4">
 		{#each projects as project}
 			<ProjectCard {project} />
 		{/each}

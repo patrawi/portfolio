@@ -40,7 +40,7 @@
 		id="card"
 		transition:slideScale={{ y: '100%', duration: 400 }}
 		use:tilt={{ scale: 1.1, reverse }}
-		class="fixed inset-0 m-auto max-h-dvh max-w-[100vw] w-[600px] h-[300px] flex flex-col rounded-xl overflow-hidden shadow-lg border-[0.5px] border-solid border-black/30"
+		class="fixed inset-0 m-auto max-h-dvh max-w-[100vw] w-[90vw] sm:w-[500px] md:w-[600px] h-[200px] sm:h-[250px] md:h-[300px] flex flex-col rounded-xl overflow-hidden shadow-lg border-[0.5px] border-solid border-black/30"
 	>
 		<div
 			id="icon"
@@ -54,14 +54,14 @@
 			id="content"
 			class=" bg-[#31354F]/75 rounded-b-xl flex-grow p-2 flex flex-col justify-center items-center"
 		>
-			<div class="font-bold text-white text-2xl">
+			<div class="font-bold text-white text-xl sm:text-2xl">
 				Patrawi |
 				{#key i}<span in:typeIn={{ speed: 0.75 }} out:fade={{ duration: 100 }}
 						>{roles[i] || ''}</span
-					>{/key}<span class=" inline-block w-1 h-[1.5rem] absolute mt-[5px] ml-[2px] animate-blink"
+					>{/key}<span class=" inline-block w-1 h-[1.2rem] sm:h-[1.5rem] absolute mt-[5px] ml-[2px] animate-blink"
 				></span>
 			</div>
-			<p class="text-white animate-pulse">Driving Innovation in the Public Sector</p>
+			<p class="text-white text-sm sm:text-base animate-pulse">Driving Innovation in the Public Sector</p>
 		</div>
 	</div>
 {/if}
